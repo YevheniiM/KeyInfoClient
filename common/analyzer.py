@@ -27,7 +27,7 @@ class KeyboardEventAnalyzer:
         """Prints the key when it is pressed (only on KEY_DOWN action)."""
 
         if event.event_type == KEY_DOWN:
-            sys.stdout.write(f"The [{event.name}] key was pressed ({event.event_type})")
+            sys.stdout.write(f"> the [{event.name}] key was pressed ({event.event_type})\n")
 
     def __check_max_buffer(self):
         """Checks the buffer length."""
