@@ -17,10 +17,13 @@ def analyze(event: KeyboardEvent):
 
 
 def main():
-    """The entry point of a program"""
+    """The entry point of a program."""
 
-    keyboard.hook(analyze)
-    keyboard.wait()
+    try:
+        keyboard.hook(analyze)
+        keyboard.wait("ctrl+alt+shift")
+    finally:
+        analyzer.abort()
 
 
 if __name__ == '__main__':
